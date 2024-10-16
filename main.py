@@ -28,26 +28,26 @@ def print_tasks(tasks):
         print(task)
 
 # Создаем список для хранения задач
-tasks = []
+task_list = []
 
 # Добавляем несколько задач
-add_task(tasks, "Купить продукты", "2024-10-18")
-add_task(tasks, "Сходить на тренировку", "2024-10-19")
-add_task(tasks, "Написать отчёт", "2024-10-20")
-add_task(tasks, "Позвонить родителям", "2024-10-21")
+add_task(task_list, "Купить продукты", "2024-10-18")
+add_task(task_list, "Сходить на тренировку", "2024-10-19")
+add_task(task_list, "Написать отчёт", "2024-10-20")
+add_task(task_list, "Позвонить родителям", "2024-10-21")
 
 # Выводим список всех текущих задач (все задачи не выполнены)
 print("Текущие задачи:")
-print_tasks(get_current_tasks(tasks))
+print_tasks(get_current_tasks(task_list))
 
 # Отмечаем несколько задач как выполненные
-tasks[0].mark_done()  # "Купить продукты" выполнено
-tasks[2].mark_done()  # "Написать отчёт" выполнено
+task_list[0].mark_done()  # "Купить продукты" выполнено
+task_list[2].mark_done()  # "Написать отчёт" выполнено
 
 # Выводим обновленный список невыполненных задач
 print("\nОбновленный список текущих задач:")
-print_tasks(get_current_tasks(tasks))
+print_tasks(get_current_tasks(task_list))
 
 # Выводим полный список всех задач, включая выполненные
 print("\nПолный список всех задач:")
-print_tasks(tasks)
+print_tasks(task_list)
